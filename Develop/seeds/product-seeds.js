@@ -30,9 +30,12 @@ const productData = [
     price: 29.99,
     stock: 22,
     category_id: 2,
-  },
+  }
 ];
 
-const seedProducts = () => Product.bulkCreate(productData);
+const seedProducts = () => {
+  console.log(Product);
+  Product.bulkCreate(productData);
+};
 
 module.exports = seedProducts;
