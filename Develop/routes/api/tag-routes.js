@@ -69,9 +69,10 @@ router.put('/:id', (req, res) => {
   })
   .then(updatedTag => {
     if(!updatedTag) {
-      res.status(404).json({message: 'No tag with this ID'})
+      res.status(404).json({message: 'No tag with this ID'});
     }
-    res.json(updatedTag))
+    res.json(updatedTag);
+  })
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
